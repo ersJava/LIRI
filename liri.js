@@ -11,63 +11,80 @@ var axios = require('axios');
 var moment = require('moment');
 var fs = require("fs");
 
-
 // Global Var
 var divider = "\n-----------------------------------\n";
+
+// Switch-Case will direct which function gets run
+// switch (action) {
+
+//     case "Artist/Band Name":
+//         concertThis();
+//         break;
+
+//     case "Song":
+//         spotifyThis();
+//         break;
+
+//     case "Movie":
+//         movieThis();
+//         break;
+
+//     case "It Says":
+//         doWhatItSays();
+//         break;
+// }
 
 
 // Bands In Town
 // concert-this <artist/band name here> ***need to make a prompt for the user to fill in inputBands
-var BandsKey = keys.bandsintown.id;
-var inputBands = process.argv[2];
-var bandsURL = "https://rest.bandsintown.com/artists/" + inputBands + "/events?app_id=" + BandsKey;
+//******* not sure why it's only printing rolling stones
+function concertThis() {
+    var BandsKey = keys.bandsintown.id;
+    var inputBands = process.argv[2];
+    var bandsURL = "https://rest.bandsintown.com/artists/" + inputBands + "/events?app_id=" + BandsKey;
 
-axios.get(bandsURL).then(
-    function (response) {
-        // for (var i = 0; i < response.data.length; i++) {
-        //     console.log(response.data[i].lineup[0])           
-        //     console.log(response.data[i].venue.name);
-        //     console.log(response.data[i].venue.city);
-        //     console.log(moment(response.data[i].datetime).format('MM Do YYYY'));
-        //     console.log("-------------------------------")
-        // }
-        for (var i = 0; i < response.data.length; i++) {
-            var showDataBands = [
-                "Line-Up: " + response.data[i].lineup[0],
-                "Venue: " + response.data[i].venue.name,
-                "City: " + response.data[i].venue.city,
-                "Date: " + (moment(response.data[i].datetime).format('MM Do YYYY')),
-            ].join("\n\n");
+    axios.get(bandsURL).then(
+        function (response) {
+            for (var i = 0; i < response.data.length; i++) {
+                console.log(response.data[i].lineup[0])
+                console.log(response.data[i].venue.name);
+                console.log(response.data[i].venue.city);
+                console.log(moment(response.data[i].datetime).format('MM Do YYYY'));
+                console.log("-------------------------------")
+            }
+            for (var i = 0; i < response.data.length; i++) {
+                var showDataBands = [
+                    "Line-Up: " + response.data[i].lineup[0],
+                    "Venue: " + response.data[i].venue.name,
+                    "City: " + response.data[i].venue.city,
+                    "Date: " + (moment(response.data[i].datetime).format('MM Do YYYY')),
+                ].join("\n\n");
+            }
+            fs.appendFile("random.txt", showDataBands + divider, function (err) {
+                if (err) throw err;
+            });
         }
-        fs.appendFile("random.txt", showDataBands + divider, function (err) {
-            if (err) throw err;
-        });
-    }
-)
+    )
+}
 
 
+var inputMusic = process.argv[2];
+var spotifyURL = "";
+// spotify-this-song '<song name here>'
 
+spotify.search({ type: 'track', query: 'All the Small Things' })
+    .then(function (response) {
+        for (var i = 0; i < response.data.length; i++) {
+            console.log(response.tracks.items.artists);
+        }
 
-
-
-//Spotify
-// var inputMusic = process.argv[2];
-// var spotifyURL = "";
-// // spotify-this-song '<song name here>'
-
-// spotify.search({ type: 'track', query: 'All the Small Things' }
-
-
-// , function(err, data) {
-//   if (err) {
-//     return console.log('Error occurred: ' + err);
-//   }
-
-// // console.log("SPOTIFY DATA: ",data.tracks); 
-// console.log("What is this???? ", data.tracks.items.artists.name);
-// });
-
-
+    })
+    // ,function (err, data) {
+    //     if (err) {
+    //         return console.log('Error occurred: ' + err);
+    //     }
+    // });
+//response.tracks.items[i].artist[0].name
 
 
 // Artist(s)
