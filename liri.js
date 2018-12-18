@@ -1,13 +1,12 @@
 // Require
 require("dotenv").config();
 
-// Keys
-var keys = require('./keys.js');
-var spotify = new Spotify(keys.spotify);
 
-// NMP
+var keys = require('./keys.js');
+
 var Spotify = require('node-spotify-api');
-var omdb = require('omdb');
+var spotify = new Spotify(keys.spotify);
+var omdbApi = require('omdb');
 var axios = require('axios');
 var moment = require('moment');
 var fs = require("fs");
@@ -70,69 +69,84 @@ function concertThis() {
 
 // Spotify
 function spotifyThis() {
+    var music = process.argv[3];
+    if (!music) {
+        music = "For Your Eyes Only";
+    }
+searchTerm = music
     spotify
-        .search({ type: 'track', query: searchTerm })
+        .search({ type: 'track', query: searchTerm, limit: 5 })
         .then(function (response) {
-            // for (var i = 0; i < response.tracks.items.length; i++); {
-            // var artist = [];
+
+            // for (var i = 0; i < response.tracks.items.length; i++); { Tried to run a for loop for to capture the top
+            // 5 responses but it would brake the code. It seems that each array/path to capture an item is different and won't
+            //work in a for loop..???
+            //  var artist = []; 
             console.log("Artist: " + response.tracks.items[0].artists[0].name);
             console.log("Song Title: " + response.tracks.items[0].name);
-            console.log("Preview URL: " + response.tracks.items[0].preview_url); // how do I loop all responses? 
+            console.log("Preview URL: " + response.tracks.items[0].preview_url);
             console.log("Album Name: " + response.tracks.items[0].album.name);
+            console.log("-------------------------------")
             // }
+
 
             var showDataMusic = [
                 "Artist: " + response.tracks.items[0].artists[0].name,
                 "Song Title: " + response.tracks.items[0].name,
-                "Preview URL: " + response.tracks.items[0].preview_url, // how do I loop all responses? 
+                "Preview URL: " + response.tracks.items[0].preview_url,
                 "Album Name: " + response.tracks.items[0].album.name,
             ].join("\n\n");
             fs.appendFile("random.txt", showDataMusic + divider, function (err) {
                 if (err) throw err;
             })
+
         }
         )
 }
-// If no song is provided then your program will default to "The Sign" by Ace of Base.
 
-// ({ type: 'track', query: searchTerm })
 
 // OMDB 
 function movieThis() {
-    omdb
-        .get({ title: 'Saw', year: 2004 }, true, function (err, movie) {
-            if (err) {
-                return console.error(err);
-            }
+    var movie = process.argv[3];
+    if (!movie) {
+        movie = "Goonies";
+        console.log("If you are looking for a classic 90s, feel good movie, check out The Goonies!")
+    }
+searchTerm = movie
+    var movieKey = keys.omdb.id;
+    var movieURL = "https://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=" + movieKey;
 
-            if (!movie) {
-                return console.log('Movie not found!');
-            }
+    axios.get(movieURL).then(
+        function (response) {
+            // for (var i = 0; i < response.data.length; i++) {
+            // console.log(response.data[i].Title); nothing was returning
+            console.log("Movie Title: " + response.data.Title);
+            console.log("Movie Release Year: " + response.data.Year);
+            console.log("IMDB Rating: " + response.data.Ratings[0].Value);
+            console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
+            console.log("Country Where Movie Was Produced: " + response.data.Country);
+            console.log("Language: " + response.data.Language);
+            console.log("Plot: " + response.data.Plot);
+            console.log("Starring Actors: " + response.data.Actors);
+            console.log("-------------------------------")
 
-            console.log(movie.plot);
+            var showDataMovie = [
+                "Movie Title: " + response.data.Title,
+                "Movie Release Year: " + response.data.Year,
+                "IMDB Rating: " + response.data.Ratings[0].Value,
+                "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value,
+                "Country Where Movie Was Produced: " + response.data.Country,
+                "Language: " + response.data.Language,
+                "Plot: " + response.data.Plot,
+                "Starring Actors: " + response.data.Actors,
+            ].join("\n\n");
+            fs.appendFile("random.txt", showDataMovie + divider, function (err) {
+                if (err) throw err;
+            })
 
-            // Saw (2004) 7.6/10
-            // Two men wake up at opposite sides of a dirty, disused bathroom, chained
-            // by their ankles to pipes. Between them lies...
-        });
+            // }
+        }
+
+    )
 }
 
-
-
-
-// This will output the following information to your terminal/bash window:
-//   * Title of the movie.
-//   * Year the movie came out.
-//   * IMDB Rating of the movie.
-//   * Rotten Tomatoes Rating of the movie.
-//   * Country where the movie was produced.
-//   * Language of the movie.
-//   * Plot of the movie.
-//   * Actors in the movie.
-
-
-// If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
-// If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
-// It's on Netflix!
-
-// You'll use the axios package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use trilogy.
