@@ -59,7 +59,7 @@ function concertThis() {
                     "Date: " + (moment(response.data[i].datetime).format('MM Do YYYY')),
                 ].join("\n\n");
             }
-            fs.appendFile("random.txt", showDataBands + divider, function (err) {
+            fs.appendFile("log.txt", showDataBands + divider, function (err) {
                 if (err) throw err;
             });
         }
@@ -96,7 +96,7 @@ searchTerm = music
                 "Preview URL: " + response.tracks.items[0].preview_url,
                 "Album Name: " + response.tracks.items[0].album.name,
             ].join("\n\n");
-            fs.appendFile("random.txt", showDataMusic + divider, function (err) {
+            fs.appendFile("log.txt", showDataMusic + divider, function (err) {
                 if (err) throw err;
             })
 
@@ -140,7 +140,7 @@ searchTerm = movie
                 "Plot: " + response.data.Plot,
                 "Starring Actors: " + response.data.Actors,
             ].join("\n\n");
-            fs.appendFile("random.txt", showDataMovie + divider, function (err) {
+            fs.appendFile("log.txt", showDataMovie + divider, function (err) {
                 if (err) throw err;
             })
 
