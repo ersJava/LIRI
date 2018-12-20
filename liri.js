@@ -116,7 +116,7 @@ function movieThis() {
     var movie = process.argv[3];
     if (!movie) {
         movie = "Goonies";
-        console.log("If you are looking for a classic 90s, feel good movie, check out The Goonies!")
+        console.log("If you are looking for a classic 90s, feel good movie, you should watch The Goonies!")
     }
     searchTerm = movie
     var movieKey = keys.omdb.id;
