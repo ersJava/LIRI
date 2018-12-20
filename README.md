@@ -19,3 +19,9 @@ The mulitple functions are performed from the case switch statments.
 ![concert this example](/images/concert_this_example.png)
 
 The return results will give you the Line-Up, venue, city and date of the show provided by moments.js 
+
+* Here is an example of the **spotifyThis()** function in action: _node liri spotify-this "Never Gonna Give You Up"_
+
+![concert this example](/images/spotify_this_example.png)
+
+The return results will give you the artist, song title, a preview URL and album name. 
