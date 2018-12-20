@@ -14,7 +14,7 @@ LIRI will perform an assortment of functions on the command line in the terminal
 
 The mulitple functions are performed from the case switch statments.
 
-* Here is an example of the concertThis() function in action: node liri concert-this "Rolling Stones"
+* Here is an example of the **concertThis()** function in action: _node liri concert-this "Rolling Stones"_
 
 ![concert this example](/images/concert_this_example.png)
 
