@@ -36,3 +36,19 @@ The return results will give all the basic information about the movie along wit
 
 If a movie is not choosen, movie-this will automatically suggest _"If you are looking for a classic 90s, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
 
+* **doWhatItSays() Function coming soon!
+
+## API Keys
+
+The API used to make this application are Spotify, Bands In Town and OMDB. The API Keys are stored in .env
+
+## log.txt
+
+fs.appendFile is logging all the data from the terminal and outputtingthe data to a log.txt and does not overwrite the file each time a command is run.
+
+
+
+
+
+
+
