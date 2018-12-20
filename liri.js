@@ -32,11 +32,17 @@ switch (input) {
         movieThis();
         break;
 
-    // case "It Says":
-    //     doWhatItSays();
-    //     break;
-}
+    case "do-what-it-says":
+        doWhatItSays();
+        break;
 
+    default: console.log("Welcome to LIRI!")
+        console.log("-------------------------------"),
+            console.log('Enter in a command follwed by your selection in "   " ');
+            console.log("1. To search for a concert, enter command 'concert-this'");
+            console.log("2. To search for a movie, enter command 'movie-this'");
+            console.log("3. To search for a song, enter command 'spotify-this'");
+}
 
 // Bands In Town
 function concertThis() {
@@ -73,7 +79,7 @@ function spotifyThis() {
     if (!music) {
         music = "For Your Eyes Only";
     }
-searchTerm = music
+    searchTerm = music
     spotify
         .search({ type: 'track', query: searchTerm, limit: 5 })
         .then(function (response) {
@@ -112,7 +118,7 @@ function movieThis() {
         movie = "Goonies";
         console.log("If you are looking for a classic 90s, feel good movie, check out The Goonies!")
     }
-searchTerm = movie
+    searchTerm = movie
     var movieKey = keys.omdb.id;
     var movieURL = "https://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=" + movieKey;
 
@@ -148,5 +154,13 @@ searchTerm = movie
         }
 
     )
+}
+// so far just got the function to console.log the text written in random.txt
+function doWhatItSays() {
+fs.readFile('random.txt', 'utf8', function(err, data){
+    if (err) throw err;
+ console.log(data);   
+})
+
 }
 
