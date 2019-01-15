@@ -6,15 +6,15 @@ LIRI will perform an assortment of functions on the command line in the terminal
 
 **To get started:**
 
-* Type in node liri in the command line. A set a instructions will pop up to show you the different functions of LIRI.
+* Type in node liri in the command line. A set an instructions will pop up to show you the different functions of LIRI.
 
 ![intro screenshot](/images/Intro.png)
 
-* To search you will need to type in the command line, node liri "selected command", followed by search term in quoations marks.   
+* To search you will need to type in the command line, node liri "selected command", followed by search term in quotations marks.
 
-The mulitple functions are performed from the case switch statments.
+The multiple functions are performed from the case switch statements.
 
-* Here is an example of the **concertThis()** function in action: _node liri concert-this "Rolling Stones"_
+* Here is an example of the **concertThis()** function in action: _node liri concert-this "Rolling Stones"_
 
 ![concert this example](/images/concert_this_example1.png)
 
@@ -34,7 +34,7 @@ If a song title is not entered, spotify-this will automatically give you _Sheena
 
 The return results will give all the basic information about the movie along with a short plot summary. 
 
-If a movie is not choosen, movie-this will automatically suggest _"If you are looking for a classic 90s, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
+If a movie is not chosen, movie-this will automatically suggest _"If you are looking for a classic 90s, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
 
 * **doWhatItSays()** function coming soon!
 

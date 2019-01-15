@@ -159,7 +159,7 @@ function movieThis() {
 function doWhatItSays() {
 fs.readFile('random.txt', 'utf8', function(err, data){
     if (err) throw err;
- console.log(data);   
+ console.log(data);
 })
 
 }
