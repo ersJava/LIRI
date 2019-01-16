@@ -1,8 +1,8 @@
+![Logo of the project](/images/liri.png)
+
 # LIRI
+> LIRI will perform an assortment of functions on the command line in the terminal
 
-## About the app:
-
-LIRI will perform an assortment of functions on the command line in the terminal
 
 **To get started:**
 
