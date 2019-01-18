@@ -9,8 +9,9 @@ For music lovers and movie enthusiast who can search songs, concerts and movies 
 
 LIRI will perform an assortment of functions on the command line in the terminal
 
+### To get started:
 
-* Type in `node liri` in the command line. A set an instructions will pop up to show you the different functions of LIRI.
+Type in `node liri` in the command line. A set an instructions will pop up to show you the different functions of LIRI.
 
 ![intro screenshot](/images/Intro.png)
 
