@@ -7,23 +7,24 @@ For music lovers and movie enthusiast who can search songs, concerts and movies 
 
 ## Features
 
-LIRI will perform an assortment of functions on the command line in the terminal
+LIRI will perform an assortment of functions on the command line in the terminal. The multiple functions are performed from the case switch statements.
 
-### To get started:
-
+### To get started
 Type in `node liri` in the command line. A set an instructions will pop up to show you the different functions of LIRI.
 
 ![intro screenshot](/images/Intro.png)
 
-* To search you will need to type in the command line, node liri "selected command", followed by search term in quotations marks.
+### Search for concerts
+Type in `node liri concert-this` + " your artist choice" in the command line. 
 
-The multiple functions are performed from the case switch statements.
-
-* Here is an example of the **concertThis()** function in action: _node liri concert-this "Rolling Stones"_
+Below is an example of `concert-this` function in action searching the Rolling Stones.
 
 ![concert this example](/images/concert_this_example1.png)
 
 The return results will give you the Line-Up, venue, city and date of the show provided by moments.js 
+
+### Search for a song
+Type in `node liri concert-this` + " your artist choice" in the command line. 
 
 * Here is an example of the **spotifyThis()** function in action: _node liri spotify-this "Never Gonna Give You Up"_
 
