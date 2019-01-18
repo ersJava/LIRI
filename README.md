@@ -3,12 +3,14 @@
 # LIRI
 > Language Interpretation and Recognition Interface
 
-For music and movie enthusiast who can search songs, concerts and movies with one app.
+For music lovers and movie enthusiast who can search songs, concerts and movies with one app.
+
+## Features
 
 LIRI will perform an assortment of functions on the command line in the terminal
 
 
-* Type in node liri in the command line. A set an instructions will pop up to show you the different functions of LIRI.
+* Type in `node liri` in the command line. A set an instructions will pop up to show you the different functions of LIRI.
 
 ![intro screenshot](/images/Intro.png)
 
