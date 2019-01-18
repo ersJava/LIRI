@@ -52,10 +52,10 @@ function concertThis() {
     axios.get(bandsURL).then(
         function (response) {
             for (var i = 0; i < response.data.length; i++) {
-                console.log(response.data[i].lineup[0])
-                console.log(response.data[i].venue.name);
-                console.log(response.data[i].venue.city);
-                console.log(moment(response.data[i].datetime).format('MM Do YYYY'));
+                console.log("Line-Up: " + response.data[i].lineup[0])
+                console.log("Venue: " + response.data[i].venue.name);
+                console.log("City: " + response.data[i].venue.city);
+                console.log("Date: " + moment(response.data[i].datetime).format('MM Do YYYY'));
                 console.log("-------------------------------")
 
                 var showDataBands = [

@@ -19,7 +19,7 @@ Type in `node liri concert-this` + " your artist choice" in the command line.
 
 Below is an example of `concert-this` function in action searching the Rolling Stones.
 
-![concert this example](/images/concert_this_example1.png)
+![concert this example](/images/concert.png)
 
 The return results will give you the Line-Up, venue, city and date of the show provided by moments.js 
 
