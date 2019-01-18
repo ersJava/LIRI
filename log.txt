@@ -208,3 +208,19 @@ Preview URL: https://p.scdn.co/mp3-preview/22bf10aff02db272f0a053dff5c0063d729df
 
 Album Name: Whenever You Need Somebody
 -----------------------------------
+Movie Title: The Dark Knight
+
+Movie Release Year: 2008
+
+IMDB Rating: 9.0/10
+
+Rotten Tomatoes Rating: 94%
+
+Country Where Movie Was Produced: USA, UK
+
+Language: English, Mandarin
+
+Plot: When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.
+
+Starring Actors: Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine
+-----------------------------------

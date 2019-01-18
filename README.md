@@ -35,10 +35,9 @@ Type in `node liri movie-this` + " your movie choice" in the command line.
 
 Below is an example of `movie-this` function in action searching **"The Dark Knight"**. The return results will give all the basic information about the movie along with a short plot summary. 
 
-![movie this example](/images/movie_this_example.png)
+![movie this example](/images/movie.png)
 
-If a movie is not chosen, movie-this will automatically suggest _"If you are looking for a classic 90s, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
-
+If a movie is not chosen, movie-this will automatically suggest _"If you are looking for a classic 90's, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
 
 
 ## API Keys
