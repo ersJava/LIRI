@@ -26,7 +26,7 @@ Type in `node liri spotify-this` + " your song choice" in the command line.
 
 Below is an example of `spotify-this` function in action searching **"Never Gonna Give You Up"**. The return results will give you the artist, song title, a preview URL and album name. 
 
-![concert this example](/images/spotify_this_example.png)
+![spotify this example](/images/spotify.png)
 
 If a song title is not entered, spotify-this will automatically give you _Sheena Easton, "For Your Eyes Only"_.
 
@@ -35,7 +35,7 @@ Type in `node liri movie-this` + " your movie choice" in the command line.
 
 Below is an example of `movie-this` function in action searching **"The Dark Knight"**. The return results will give all the basic information about the movie along with a short plot summary. 
 
-![concert this example](/images/movie_this_example.png)
+![movie this example](/images/movie_this_example.png)
 
 If a movie is not chosen, movie-this will automatically suggest _"If you are looking for a classic 90s, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
 
