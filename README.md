@@ -15,14 +15,14 @@ Type in `node liri` in the command line. A set an instructions will pop up to sh
 ![intro screenshot](/images/Intro.png)
 
 ### Search for concerts
-Type in `node liri concert-this` + **"your artist choice"** in the command line. 
+Type in `node liri concert-this` + "**your artist choice**" in the command line. 
 
 Below is an example of `concert-this` function in action searching the **"Rolling Stones"**. The return results will give you the Line-Up, venue, city and date of the show provided by moments.js 
 
 ![concert this example](/images/concert.png)
 
 ### Search for a song
-Type in `node liri spotify-this` + **"your song choice"** in the command line. 
+Type in `node liri spotify-this` + "**your song choice**" in the command line. 
 
 Below is an example of `spotify-this` function in action searching **"Never Gonna Give You Up"**. The return results will give you the artist, song title, a preview URL and album name. 
 
@@ -31,7 +31,7 @@ Below is an example of `spotify-this` function in action searching **"Never Gonn
 If a song title is not entered, `spotify-this` will automatically give you _Sheena Easton, "For Your Eyes Only"_.
 
 ### Search for a movie
-Type in `node liri movie-this` + **"your movie choice"** in the command line.
+Type in `node liri movie-this` + "**your movie choice**"in the command line.
 
 Below is an example of `movie-this` function in action searching **"The Dark Knight"**. The return results will give all the basic information about the movie along with a short plot summary. 
 
