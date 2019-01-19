@@ -42,18 +42,18 @@ If a movie is not chosen, `movie-this` will automatically suggest _"If you are l
 ### log.txt
 fs.appendFile is logging all the data from the terminal and outputting the data to the log.txt and does not overwrite the file each time a command is run.
 
-## Built With
+## Project Details
 
 ### APIs
 * Spotify API
 * Bands In Town Artist Events API
 * OMDB API
 
-### Tools/ Languages
-* Node.js
-* Moments.js
-* Axios
 
+### Technologies Used
+* Node JS
+* Moments JS
+* Axios
 
 ## Contributing
 Pull request are welcome!
