@@ -15,7 +15,7 @@ Type in `node liri` in the command line. A set an instructions will pop up to sh
 ![intro screenshot](/images/Intro.png)
 
 ### Search for concerts
-Type in `node liri concert-this` + "**your artist choice**" in the command line. 
+Type in ```node liri concert-this '<your artist choice>'``` in the command line. 
 
 Below is an example of `concert-this` function in action searching the **"Rolling Stones"**. The return results will give you the Line-Up, venue, city and date of the show provided by moments.js 
 
@@ -31,7 +31,7 @@ Below is an example of `spotify-this` function in action searching **"Never Gonn
 If a song title is not entered, `spotify-this` will automatically give you _Sheena Easton, "For Your Eyes Only"_.
 
 ### Search for a movie
-Type in `node liri movie-this` + "**your movie choice**"in the command line.
+Type in `node liri movie-this` + "**your movie choice**" in the command line.
 
 Below is an example of `movie-this` function in action searching **"The Dark Knight"**. The return results will give all the basic information about the movie along with a short plot summary. 
 
@@ -39,16 +39,19 @@ Below is an example of `movie-this` function in action searching **"The Dark Kni
 
 If a movie is not chosen, `movie-this` will automatically suggest _"If you are looking for a classic 90's, feel good movie, you should watch The Goonies!"_ and give you the movie results for The Goonies. 
 
-
-## API Keys
-
-The API used to make this application are Spotify, Bands In Town and OMDB. The API Keys are stored in .env
-
-## log.txt
-
+### log.txt
 fs.appendFile is logging all the data from the terminal and outputting the data to the log.txt and does not overwrite the file each time a command is run.
 
-* **doWhatItSays()** function coming soon!
+## Built With
+
+### APIs
+The APIs used to make this application are Spotify, Bands In Town and OMDB. 
+
+## Contributing
+Pull request are welcome!
+
+1. `do-what-it-says` feature still needs to be added. 
+2. Add in a for loop for 
 
 
 
