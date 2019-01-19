@@ -45,7 +45,9 @@ fs.appendFile is logging all the data from the terminal and outputting the data 
 ## Built With
 
 ### APIs
-The APIs used to make this application are Spotify, Bands In Town and OMDB.
+* Spotify API
+* Bands In Town Artist Events API
+* OMDB API
 
 ### Tools/ Languages
 * Node.js
