@@ -1,5 +1,4 @@
-![Logo of the project]
-<img src="https://github.com/ersJava/LIRI/blob/master/images/liri_logo.png" width="200">
+<img src="https://github.com/ersJava/LIRI/blob/master/images/liri_logo.png" width="200" height="200" alt="liri logo">
 
 
 # LIRI
