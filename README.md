@@ -1,5 +1,5 @@
 ![Logo of the project](/images/liri_logo.png){:height="24px" width="48px"}
-<img src="https://github.com/images/liri_logo.png" width="48">
+<img src="https://github.com/ersJava/LIRI/images/liri_logo.png" width="48">
 <img src="https://github.com/favicon.ico" width="48">
 
 # LIRI
