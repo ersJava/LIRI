@@ -1,4 +1,4 @@
-![Logo of the project](/images/liri.png)
+![Logo of the project](/images/liri_logo.png)
 
 # LIRI
 > Language Interpretation and Recognition Interface
