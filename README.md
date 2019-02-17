@@ -1,4 +1,4 @@
-![Logo of the project](/images/liri_logo.png =250x250)
+![Logo of the project](/images/liri_logo.png){:height="24px" width="48px"}
 
 # LIRI
 > Language Interpretation and Recognition Interface
